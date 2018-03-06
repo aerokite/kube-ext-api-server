@@ -1,4 +1,4 @@
 # external packages folder
-.idea/
+.idea
 dist/
 bin/
