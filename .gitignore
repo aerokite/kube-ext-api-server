@@ -1,0 +1,4 @@
+# external packages folder
+.idea/
+dist/
+bin/
