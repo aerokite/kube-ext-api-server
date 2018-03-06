@@ -1,0 +1,5 @@
+apiVersion: aerokite.me/v1alpha1
+kind: Stack
+metadata:
+  name: stack-example
+spec:
