@@ -79,6 +79,7 @@ type Stack struct {
 }
 
 type StackSpec struct {
+	A string
 }
 
 type StackStatus struct {

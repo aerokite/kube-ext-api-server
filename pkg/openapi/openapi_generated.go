@@ -30,6 +30,14 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
+		"github.com/aerokite/kube-ext-api-server/pkg/apis/aerokite/v1alpha1.S": {
+			Schema: spec.Schema{
+				SchemaProps: spec.SchemaProps{
+					Properties: map[string]spec.Schema{},
+				},
+			},
+			Dependencies: []string{},
+		},
 		"github.com/aerokite/kube-ext-api-server/pkg/apis/aerokite/v1alpha1.Stack": {
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
@@ -65,6 +73,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 							},
 						},
 					},
+					Required: []string{"spec"},
 				},
 			},
 			Dependencies: []string{
@@ -133,7 +142,15 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 			Schema: spec.Schema{
 				SchemaProps: spec.SchemaProps{
 					Description: "StackSpec defines the desired state of Stack",
-					Properties:  map[string]spec.Schema{},
+					Properties: map[string]spec.Schema{
+						"a": {
+							SchemaProps: spec.SchemaProps{
+								Type:   []string{"string"},
+								Format: "",
+							},
+						},
+					},
+					Required: []string{"a"},
 				},
 			},
 			Dependencies: []string{},

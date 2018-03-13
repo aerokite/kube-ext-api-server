@@ -41,12 +41,17 @@ type Stack struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   StackSpec   `json:"spec,omitempty"`
+	Spec   StackSpec   `json:"spec"`
 	Status StackStatus `json:"status,omitempty"`
+}
+
+type S struct {
+
 }
 
 // StackSpec defines the desired state of Stack
 type StackSpec struct {
+	A string `json:"a"`
 }
 
 // StackStatus defines the observed state of Stack

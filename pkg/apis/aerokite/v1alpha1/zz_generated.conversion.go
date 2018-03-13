@@ -105,6 +105,7 @@ func Convert_aerokite_StackList_To_v1alpha1_StackList(in *aerokite.StackList, ou
 }
 
 func autoConvert_v1alpha1_StackSpec_To_aerokite_StackSpec(in *StackSpec, out *aerokite.StackSpec, s conversion.Scope) error {
+	out.A = in.A
 	return nil
 }
 
@@ -114,6 +115,7 @@ func Convert_v1alpha1_StackSpec_To_aerokite_StackSpec(in *StackSpec, out *aeroki
 }
 
 func autoConvert_aerokite_StackSpec_To_v1alpha1_StackSpec(in *aerokite.StackSpec, out *StackSpec, s conversion.Scope) error {
+	out.A = in.A
 	return nil
 }
 

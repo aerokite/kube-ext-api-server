@@ -27,4 +27,3 @@ limitations under the License.
 // +k8s:defaulter-gen=TypeMeta
 // +groupName=aerokite.me
 package v1alpha1 // import "github.com/aerokite/kube-ext-api-server/pkg/apis/aerokite/v1alpha1"
-
